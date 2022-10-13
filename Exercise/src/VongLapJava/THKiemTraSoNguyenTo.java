@@ -32,6 +32,7 @@ public class THKiemTraSoNguyenTo {
             if (Objects.equals(number, 0)) {
                 flagContinue = false;
             }
+        } while (flagContinue);
 //            System.out.println("Bạn có muốn kiểm tra tiếp không? Y/N");
 //            String checkContinue = scanner.nextLine();
 //            if (Objects.equals(checkContinue, "Y")) {
@@ -41,6 +42,6 @@ public class THKiemTraSoNguyenTo {
 //                    flagContinue = false;
 //                }
 //            }
-        } while (flagContinue);
+
     }
 }
