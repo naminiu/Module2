@@ -6,7 +6,52 @@ public class THDaoNguocCacPhanTuCuaMang {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        delOneValueOfArrayView();
+        boolean checkContinue = false;
+        do {
+            System.out.println("Bài 1: đảo ngược giá trị của mảng");
+            System.out.println("Bài 2: kiểm tra một giá trị có trong mảng hay không");
+            System.out.println("Bài 3: tìm giá trị lớn nhất trong mảng");
+            System.out.println("Bài 4: tìm giá trị nhỏ nhất trong mảng");
+            System.out.println("Bài 5: Thêm một giá trị vào mảng");
+            System.out.println("Bài 6: Xóa một giá trị vào mảng");
+            System.out.print("Nhập số để chọn bài: ");
+            String number = scanner.nextLine();
+            switch (number) {
+                case "1":
+                    System.out.println("Bài 1: đảo ngược giá trị của mảng");
+                    reverseArrayView();
+                    break;
+                case "2":
+                    System.out.println("Bài 2: kiểm tra một giá trị có trong mảng hay không");
+                    checkValueinArrayView();
+                    break;
+                case "3":
+                    System.out.println("Bài 3: tìm giá trị lớn nhất trong mảng");
+                    findMaxView();
+                    break;
+                case "4":
+                    System.out.println("Bài 4: tìm giá trị nhỏ nhất trong mảng");
+                    findMinView();
+                    break;
+                case "5":
+                    System.out.println("Bài 5: Thêm một giá trị vào mảng");
+                    addValueInArrayView();
+                    break;
+                case "6":
+                    System.out.println("Bài 6: Xóa một giá trị vào mảng");
+                    delOneValueOfArrayView();
+                    break;
+            }
+            System.out.println("Bạn có muốn tiếp tục không? Y/N");
+            String strCheckContinue = scanner.nextLine();
+            if (strCheckContinue == "Y"){
+                checkContinue = true;
+            } else if(strCheckContinue == "N"){
+                checkContinue = false;
+            }
+
+        } while (checkContinue);
+
     }
 
     public static void delOneValueOfArrayView() {
@@ -50,6 +95,7 @@ public class THDaoNguocCacPhanTuCuaMang {
         int addIndexNumber = scanner.nextInt();
         System.out.print("Nhập giá trị cho vị trí " + addIndexNumber + ": ");
         int value = scanner.nextInt();
+        System.out.println("Mảng mới là: ");
         addValueInArray(array, addIndexNumber, value);
     }
 
