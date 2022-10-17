@@ -8,6 +8,7 @@ public class THDaoNguocCacPhanTuCuaMang {
     public static void main(String[] args) {
         boolean checkContinue = false;
         do {
+            System.out.println("Menu");
             System.out.println("Bài 1: đảo ngược giá trị của mảng");
             System.out.println("Bài 2: kiểm tra một giá trị có trong mảng hay không");
             System.out.println("Bài 3: tìm giá trị lớn nhất trong mảng");
@@ -15,49 +16,51 @@ public class THDaoNguocCacPhanTuCuaMang {
             System.out.println("Bài 5: Thêm một giá trị vào mảng");
             System.out.println("Bài 6: Xóa một giá trị vào mảng");
             System.out.print("Nhập số để chọn bài: ");
-            String number = scanner.nextLine();
+            int number = Integer.parseInt(scanner.nextLine());
             switch (number) {
-                case "1":
+                case 1:
                     System.out.println("Bài 1: đảo ngược giá trị của mảng");
                     reverseArrayView();
                     break;
-                case "2":
+                case 2:
                     System.out.println("Bài 2: kiểm tra một giá trị có trong mảng hay không");
                     checkValueinArrayView();
                     break;
-                case "3":
+                case 3:
                     System.out.println("Bài 3: tìm giá trị lớn nhất trong mảng");
                     findMaxView();
                     break;
-                case "4":
+                case 4:
                     System.out.println("Bài 4: tìm giá trị nhỏ nhất trong mảng");
                     findMinView();
                     break;
-                case "5":
+                case 5:
                     System.out.println("Bài 5: Thêm một giá trị vào mảng");
                     addValueInArrayView();
                     break;
-                case "6":
+                case 6:
                     System.out.println("Bài 6: Xóa một giá trị vào mảng");
                     delOneValueOfArrayView();
                     break;
+                default:
             }
             System.out.println("Bạn có muốn tiếp tục không? Y/N");
             String strCheckContinue = scanner.nextLine();
-            if (strCheckContinue == "Y"){
+            if (strCheckContinue.equals("Y")) {
                 checkContinue = true;
-            } else if(strCheckContinue == "N"){
-                checkContinue = false;
+            } else {
+                if (strCheckContinue.equals("N")) {
+                    checkContinue = false;
+                }
             }
 
         } while (checkContinue);
-
     }
 
     public static void delOneValueOfArrayView() {
         int[] array = inputArray();
         System.out.print("Nhập một số để kiểm tra có trong mảng hay không? ");
-        int value = scanner.nextInt();
+        int value = Integer.parseInt(scanner.nextLine());
         int index = 0;
         boolean checkValue = false;
         int i;
@@ -92,9 +95,9 @@ public class THDaoNguocCacPhanTuCuaMang {
     public static void addValueInArrayView() {
         int[] array = inputArray();
         System.out.print("Bạn muốn thêm vào vị trí thứ bao nhiêu?(từ 0 đến " + array.length + "): ");
-        int addIndexNumber = scanner.nextInt();
+        int addIndexNumber = Integer.parseInt(scanner.nextLine());
         System.out.print("Nhập giá trị cho vị trí " + addIndexNumber + ": ");
-        int value = scanner.nextInt();
+        int value = Integer.parseInt(scanner.nextLine());
         System.out.println("Mảng mới là: ");
         addValueInArray(array, addIndexNumber, value);
     }
@@ -120,7 +123,7 @@ public class THDaoNguocCacPhanTuCuaMang {
     public static void findMinView() {
         int[] array = inputArray();
         int min = findMin(array);
-        System.out.println("số lớn nhất trong mảng là " + min);
+        System.out.println("số nhỏ nhất trong mảng là " + min);
     }
 
     public static int findMin(int array[]) {
@@ -152,7 +155,7 @@ public class THDaoNguocCacPhanTuCuaMang {
     public static void checkValueinArrayView() {
         int[] array = inputArray();
         System.out.println("Nhập giá trị cần tìm trong mảng: ");
-        int value = scanner.nextInt();
+        int value = Integer.parseInt(scanner.nextLine());
         checkValueinArray(value, array);
     }
 
@@ -210,7 +213,7 @@ public class THDaoNguocCacPhanTuCuaMang {
         int i;
         for (i = 0; i < array.length; i++) {
             System.out.print("nhập phần tử thứ " + i + ": ");
-            int item = scanner.nextInt();
+            int item = Integer.parseInt(scanner.nextLine());
             array[i] = item;
         }
         System.out.println(convertArrayToString(array));

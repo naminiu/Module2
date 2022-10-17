@@ -3,16 +3,8 @@ package MangVaPhuongThucTrongJava;
 public class ViDu {
 
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5};
-        int temp;
-        int last = array.length-1;
-        for (int i = 0; i < array.length;i++){
-            temp = array[i];
-            array[last] = array[i];
-            array[i] = temp;
-            last--;
-        }
-        System.out.println();
+       int a = (int) 6.5;
+        System.out.println(a);
     }
 }
 
