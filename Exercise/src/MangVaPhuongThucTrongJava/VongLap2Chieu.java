@@ -19,6 +19,7 @@ public class VongLap2Chieu {
             System.out.println("Bài 8. In ra tam giác vuông góc dưới trái ");
             System.out.println("Bài 8. In ra tam giác vuông góc dưới trái và tính tổng");
             System.out.println("Bài 9. In ra tam giác vuông góc dưới phải và tính tổng các số chẵn ");
+            System.out.println("Bài 10. Tính tổng giá trị của một cột bất kì ");
             System.out.println("Nhập 0 để thoát ");
             System.out.print("Nhập số: ");
             choice = scanner.nextInt();
@@ -58,11 +59,40 @@ public class VongLap2Chieu {
                     System.out.println("Bài 9. In ra tam giác vuông góc dưới phải ");
                     tamGiacVuongGocDuoiPhaiView();
                     break;
+                case 10:
+                    System.out.println("Bài 10. Tính tổng giá trị của một cột bất kì ");
+                    tongCacGiaTriCuaMotCot();
                 case 0:
                     System.exit(0);
             }
         } while (choice != 0);
+    }
 
+    public static void tongCacGiaTriCuaMotCot() {
+        System.out.print("Nhập số dòng: ");
+        int nRow = scanner.nextInt();
+        System.out.print("Nhập số cột: ");
+        int nCol = scanner.nextInt();
+        int array[][] = inputArray1(nRow, nCol);
+        printArray(array);
+        int numberCol;
+        int sum;
+        do {
+            System.out.printf("Nhập số cột bạn muốn kiểm tra(từ 0 đến %d): ", nCol - 1);
+            numberCol = scanner.nextInt();
+            sum = 0;
+            for (int i = 0; i < array.length; i++) {
+                for (int j = 0; j < array[i].length; j++) {
+                    if (numberCol == j) {
+                        System.out.print(array[i][j] + " ");
+                        sum += array[i][j];
+                    }
+                }
+            }
+        } while (numberCol > nCol - 1);
+
+        System.out.println("");
+        System.out.printf("Tổng giá trị của cột %d là %d", numberCol, sum);
     }
 
     public static void tongCacGiaTriDuongBienView() {
@@ -186,14 +216,14 @@ public class VongLap2Chieu {
                     System.out.print(str);
                 } else {
                     System.out.print(arr[i][j] + " ");
-                    if (arr[i][j] % 2 == 0){
+                    if (arr[i][j] % 2 == 0) {
                         sum += arr[i][j];
                     }
                 }
             }
             System.out.println("");
         }
-        System.out.println("Tổng số chẵn trong tam giác là: "+ sum);
+        System.out.println("Tổng số chẵn trong tam giác là: " + sum);
     }
 
     public static void tamGiacVuongGocDuoiTraiView() {
@@ -207,7 +237,7 @@ public class VongLap2Chieu {
             }
             System.out.println("");
         }
-        System.out.println("Tổng các giá trị trong hình tam giác là: "+ sum);
+        System.out.println("Tổng các giá trị trong hình tam giác là: " + sum);
     }
 
     public static void totalEvenArrayView() {
@@ -233,6 +263,24 @@ public class VongLap2Chieu {
         int nRow = scanner.nextInt();
         System.out.print("Nhập số cột: ");
         int nCol = scanner.nextInt();
+        int array[][] = new int[nRow][nCol];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = (int) (Math.random() * (100 - 10)) + 10;
+            }
+        }
+        return array;
+    }
+
+    public static void inputArray1View() {
+        System.out.print("Nhập số dòng: ");
+        int nRow = scanner.nextInt();
+        System.out.print("Nhập số cột: ");
+        int nCol = scanner.nextInt();
+        inputArray1(nRow, nCol);
+    }
+
+    public static int[][] inputArray1(int nRow, int nCol) {
         int array[][] = new int[nRow][nCol];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
