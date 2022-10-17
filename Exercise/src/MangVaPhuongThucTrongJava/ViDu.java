@@ -3,8 +3,14 @@ package MangVaPhuongThucTrongJava;
 public class ViDu {
 
     public static void main(String[] args) {
-       int a = (int) 6.5;
-        System.out.println(a);
+        System.out.println(2 + "\t" + 3);
+        System.out.println(2 + '\t' + 3);
+        System.out.println("" + 2 + '\t' + 3);
+        System.out.println(2 + 'a' + 3);
+        System.out.println(2 + "a" + 3);
+        System.out.println("" + 2 + 'a' + 3);
+
+
     }
 }
 
