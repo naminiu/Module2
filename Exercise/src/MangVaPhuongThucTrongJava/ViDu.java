@@ -1,18 +1,31 @@
 package MangVaPhuongThucTrongJava;
 
+import java.util.Arrays;
+
 public class ViDu {
 
     public static void main(String[] args) {
-        System.out.println(2 + "\t" + 3);
-        System.out.println(2 + '\t' + 3);
-        System.out.println("" + 2 + '\t' + 3);
-        System.out.println(2 + 'a' + 3);
-        System.out.println(2 + "a" + 3);
-        System.out.println("" + 2 + 'a' + 3);
-
-
+        int [] arr = {1,2,3,4,5};
+        int index = 3;
+        int[] arrNew2 = Arrays.copyOf(arr, arr.length - 1);
+        if (index < arr.length - 1 && index >= 0) {
+            for (int i = 0; i < arrNew2.length; i++) {
+                if (i >= index) {
+                    arrNew2[i] = arr[i + 1];
+                    System.out.println(arrNew2[i]);
+                }
+            }
+        }
     }
 }
+
+//        System.out.println(2 + "\t" + 3);
+//        System.out.println(2 + '\t' + 3);
+//        System.out.println("" + 2 + '\t' + 3);
+//        System.out.println(2 + 'a' + 3);
+//        System.out.println(2 + "a" + 3);
+//        System.out.println("" + 2 + 'a' + 3);
+
 
 //        // Declare and initialize variables
 //        int num1 = 1;

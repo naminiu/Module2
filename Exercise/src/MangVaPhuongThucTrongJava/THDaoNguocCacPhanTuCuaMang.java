@@ -1,5 +1,6 @@
 package MangVaPhuongThucTrongJava;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class THDaoNguocCacPhanTuCuaMang {
@@ -15,6 +16,7 @@ public class THDaoNguocCacPhanTuCuaMang {
             System.out.println("Bài 4: tìm giá trị nhỏ nhất trong mảng");
             System.out.println("Bài 5: Thêm một giá trị vào mảng");
             System.out.println("Bài 6: Xóa một giá trị vào mảng");
+            System.out.println("Bài 7: Đếm số lần xuất hiện của ký tự trong chuỗi");
             System.out.print("Nhập số để chọn bài: ");
             int number = Integer.parseInt(scanner.nextLine());
             switch (number) {
@@ -42,6 +44,10 @@ public class THDaoNguocCacPhanTuCuaMang {
                     System.out.println("Bài 6: Xóa một giá trị vào mảng");
                     delOneValueOfArrayView();
                     break;
+                case 7:
+                    System.out.println("Bài 7: Đếm số lần xuất hiện của ký tự trong chuỗi");
+                    countCharInStringView();
+                    break;
                 default:
             }
             System.out.println("Bạn có muốn tiếp tục không? Y/N");
@@ -55,6 +61,35 @@ public class THDaoNguocCacPhanTuCuaMang {
             }
 
         } while (checkContinue);
+    }
+
+    private static void countCharInStringView() {
+        System.out.println("Nhập chuỗi bạn muốn tìm: ");
+        String str = scanner.nextLine();
+        String str1 = str.toLowerCase();
+        char[] chars = str1.toCharArray();
+
+        boolean isReTryChar = true;
+        String cString = "";
+        do {
+            System.out.println("Nhập kí tự bạn muốn tìm: ");
+            cString = scanner.nextLine();
+            if (cString.length() > 1 || cString.equals("")) {
+                isReTryChar = true;
+            } else {
+                isReTryChar = false;
+            }
+        } while (isReTryChar);
+
+        char c = cString.toLowerCase().toCharArray()[0];
+        int count = 0;
+        for (char item : chars) {
+            if (item == c) {
+                count++;
+            }
+        }
+        System.out.printf("Số lần xuất hiện của kí tự %s là: %d", cString, count);
+        System.out.println("");
     }
 
     public static void delOneValueOfArrayView() {
@@ -232,6 +267,7 @@ public class THDaoNguocCacPhanTuCuaMang {
         }
         return str;
     }
+
 }
 //    public static void addLastValueArrayView() {
 //        int[] array = inputArray();
