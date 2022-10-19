@@ -1,9 +1,8 @@
 package MangVaPhuongThucTrongJava;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class THDaoNguocCacPhanTuCuaMang {
+public class CacBaiTapVeMang1Chieu {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {

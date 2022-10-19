@@ -1,3 +1,5 @@
+package IntroduceJava;
+
 public class THKhaiBaoVaSuDungBien {
     public static void main(String[] args) {
         int i = 10;                 //        Biến i kiểu số nguyên, có giá trị là 10

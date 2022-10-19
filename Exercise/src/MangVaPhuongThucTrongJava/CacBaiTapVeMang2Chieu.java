@@ -2,7 +2,7 @@ package MangVaPhuongThucTrongJava;
 
 import java.util.Scanner;
 
-public class VongLap2Chieu {
+public class CacBaiTapVeMang2Chieu {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {

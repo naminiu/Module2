@@ -1,3 +1,5 @@
+package IntroduceJava;
+
 import java.util.Scanner;
 
 public class THTinhSoNgayTrongThang {

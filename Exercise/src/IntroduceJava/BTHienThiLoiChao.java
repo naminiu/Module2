@@ -1,7 +1,5 @@
 package IntroduceJava;
 
-import java.util.Scanner;
-
 public class BTHienThiLoiChao {
 
     public static void main(String[] args) {
