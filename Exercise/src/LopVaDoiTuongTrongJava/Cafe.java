@@ -19,6 +19,9 @@ public class Cafe {
         this.volume = volume;
     }
 
+    public Cafe() {
+    }
+
     @Override
     public String toString() {
         return "caFe\n" +
