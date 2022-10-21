@@ -1,4 +1,4 @@
-package LopVaDoiTuongTrongJava;
+package AccessModifier;
 
 public class THStaticMethod {
      int id = 0;

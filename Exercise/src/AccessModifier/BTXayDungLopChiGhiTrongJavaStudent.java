@@ -1,4 +1,4 @@
-package LopVaDoiTuongTrongJava;
+package AccessModifier;
 
 public class BTXayDungLopChiGhiTrongJavaStudent {
     private String name = "Join";

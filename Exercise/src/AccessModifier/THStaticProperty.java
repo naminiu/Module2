@@ -1,4 +1,4 @@
-package LopVaDoiTuongTrongJava;
+package AccessModifier;
 
 public class THStaticProperty {
     private String name;

@@ -1,4 +1,4 @@
-package LopVaDoiTuongTrongJava;
+package AccessModifier;
 
 public class BTAccessModifierColor {
     private double radius = 1;
