@@ -29,11 +29,15 @@ public class Point3D extends Point2D {
         this.z = z;
     }
 
-    public float[] getXYZ() {
-        float[] arr = new float[3];
-        arr[0] = super.getX();
-        arr[1] = super.getY();
-        arr[2] = getZ();
+//    public float[] getXYZ() {
+//        float[] arr = new float[3];
+//        arr[0] = super.getX();
+//        arr[1] = super.getY();
+//        arr[2] = getZ();
+//        return arr;
+//    }
+    public float[] getXYZ(){
+        float [] arr = {super.getX(),super.getY(),getZ()};
         return arr;
     }
 
