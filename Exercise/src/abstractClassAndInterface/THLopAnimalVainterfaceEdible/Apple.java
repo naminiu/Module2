@@ -8,4 +8,9 @@ public class Apple extends Fruit {
     public String howToEat() {
         return "Apple could be cut into slices to eat";
     }
+
+    @Override
+    public String howMuchsuger() {
+        return "none";
+    }
 }

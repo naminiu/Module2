@@ -17,7 +17,7 @@ public class Test {
         animals[0] = new Tiger();
         animals[1] = new Chicken();
         for (Animal animal : animals) {
-            System.out.println(animal.makeSound());
+//            System.out.println(animal.makeSound());
         }
 
         Fruit[] fruits = new Fruit[2];
@@ -26,6 +26,7 @@ public class Test {
         for(Fruit fruit : fruits){
             System.out.println(fruit.howToEat());
         }
+
     }
 }
 
