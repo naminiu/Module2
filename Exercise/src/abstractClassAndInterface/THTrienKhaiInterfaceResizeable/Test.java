@@ -2,7 +2,7 @@ package abstractClassAndInterface.THTrienKhaiInterfaceResizeable;
 
 public class Test {
     public static void main(String[] args) {
-        int x = (int) Math.floor(Math.random() * 100);
+        int x = (int) Math.floor(Math.random() *10);
         Shape[] shapes = new Shape[3];
         shapes[0] = new Circle(x, "yellow", false);
         shapes[1] = new Rectangle(x, x, "infinity", true);
