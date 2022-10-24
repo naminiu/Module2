@@ -1,6 +1,6 @@
 package KeThua.BTLopPoint2DVa3D;
 
-public class Point2D {
+public class    Point2D {
     private float x = 1;
     private float y = 1;
 

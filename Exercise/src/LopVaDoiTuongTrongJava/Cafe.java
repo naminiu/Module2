@@ -30,6 +30,7 @@ public class Cafe {
                 "volume: " + volume
                 ;
     }
+
     // methods
     public double getPricePerKg() {
         return this.pricePerKg;
