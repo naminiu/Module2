@@ -23,15 +23,15 @@ public class Square extends Shape {
         this.side = side;
     }
 
-    @Override
-    public String toString() {
-        return "Square{" +
-                "side=" + side +
-                '}';
-    }
 
     @Override
     public void resize(double percent) {
-        this.side *= (percent / 200);
+        this.side = this.side*(percent/100) + this.side ;
+    }
+
+    @Override
+    public String toString() {
+       return "A Square with side = " + this.getSide() + ", which is a class of " + super.toString();
+
     }
 }

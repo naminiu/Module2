@@ -30,7 +30,7 @@ public abstract class Shape implements Resizeable {
 
     @Override
     public String toString() {
-        return " A shape with color of " + getColor() + " and " + (isFilled() ? "filled" : "not filled");
+        return "A shape with color of " + getColor() + " and " + (isFilled() ? "filled" : "not filled");
     }
 
     public static void printShape(Shape[] shape) {
