@@ -2,6 +2,7 @@ package abstractClassAndInterface.TestAbstract;
 
 public abstract class Hinh {
     protected ToaDo toaDo;
+    public Hinh(){}
 
     public Hinh(ToaDo toaDo) {
         this.toaDo = toaDo;
@@ -21,6 +22,6 @@ public abstract class Hinh {
                 '}';
     }
 
-    public abstract double tinhDienTich();
+     abstract double tinhDienTich();
 
 }

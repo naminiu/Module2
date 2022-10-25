@@ -21,6 +21,7 @@ public class Test {
             System.out.println(circle);
         }
         Arrays.sort(circles);
+        System.out.println("");
 
         for (ComparableCircle circle : circles){
             System.out.println(circle);

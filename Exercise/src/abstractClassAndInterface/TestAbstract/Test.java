@@ -6,12 +6,13 @@ public class Test {
         ToaDo td2 = new ToaDo(7,9);
         ToaDo td3 = new ToaDo(12,14);
 
-//        Hinh h = new Hinh(td1);
-        Hinh h = new Diem(td1);
-        Hinh h1 = new HinhTron(td2,2);
-        Hinh h2 = new HinhChuNhat(td3,10,5);
-        HinhTron hinhTron = new HinhTron(td1,2);
-        System.out.println(hinhTron);
+        Hinh h1 = new HinhTron();
+        Hinh h2 = new HinhChuNhat();
+        Hinh h3 = new Diem();
+        h2 = h3;
+        HinhTron h6 =(HinhTron) h1;
+        Hinh h5 = h1;
+
 
 //        System.out.println(h);
 //        System.out.println("TD2 " + h1.tinhDienTich());

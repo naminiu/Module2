@@ -8,6 +8,9 @@ public class HinhTron extends Hinh {
         this.r = r;
     }
 
+    public HinhTron() {
+    }
+
     public double getR() {
         return r;
     }
