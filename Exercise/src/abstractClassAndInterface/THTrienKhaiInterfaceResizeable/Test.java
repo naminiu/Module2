@@ -7,9 +7,6 @@ public class Test {
 
         Shape[] shape = new Shape[5];
         shape[0] = new Circle(1);
-//        shape[1] = new Circle(1);
-//        shape[2] = new Circle(1);
-//        shape[3] = new Circle(1);
         shape[1] = new Rectangle(1, 2);
         shape[2] = new Square(1);
         shape[3] = new Circle(4);
