@@ -16,7 +16,6 @@ public class MyList<E> {
         elements = new Object[CAPACITY];
     }
 
-
     public MyList(int size, int DEFAULT_CAPACITY, Object[] elements) {
         this.size = size;
         this.DEFAULT_CAPACITY = DEFAULT_CAPACITY;
@@ -47,7 +46,6 @@ public class MyList<E> {
         this.elements = elements;
     }
 
-    // mở rộng capacity
     public void remove(int index) {
         for (int i = index; i < size - 1; i++) {
             elements[i] = elements[i + 1];
@@ -55,34 +53,75 @@ public class MyList<E> {
         size--;
     }
 
-    public void add(int index, E element) {
-        for (int i = 0; i <size - 1;i++){
-            if (i == index){
-                ensureCapa();
-                elements[i] = element;
-            }
-            if (i > index){
-                elements[i] = elements[i+1];
-            }
+    // add index
+    public void add(int index, int value) {
+        if (index >= elements.length) {
+            int newSize = elements.length + (index - (elements.length - 1));
+            elements = Arrays.copyOf(elements, newSize);
+            DEFAULT_CAPACITY = newSize;
         }
+        if (index >= 0 && index < elements.length) {
+            for (int i = elements.length - 2; i >= index; i--) {
+                elements[i + 1] = elements[i];
+            }
+            elements[index] = value;
+            size++;
+        }
+
     }
 
-    //    {1,2,3,4,5,6}
-//    public void add(int index, E element) {
-//        int newSize = elements.length + 1;
-//        elements = Arrays.copyOf(elements, newSize);
-//        if (index < size && index > 0) {
-//            for (int i = 0; i < elements.length; i++) {
-//                if (i == index) {
-//
-//                    elements[i] = element;
-//                }
-//                if (i > index) {
-//                    elements[i] = elements[i + 1];
-//                }
+    // add vào chỗ trống
+//    public void add(int index, int value) {
+//        if (size >= elements.length) {
+//            ensureCapa();
+//        }
+//        if (index > 0 || index < size) {
+//            for (int i = size - 1; i >= index; i--) {
+//                elements[i + 1] = elements[i];
 //            }
+//            elements[index] = value;
+//            size++;
 //        }
 //    }
+    public Object clone() {
+        return "MyListClone{" +
+                "size=" + size +
+                ", DEFAULT_CAPACITY=" + DEFAULT_CAPACITY +
+                ", elements=" + Arrays.toString(elements) +
+                '}';
+    }
+
+    public boolean contains(E value) {
+        for (Object itemp : elements) {
+            if (itemp == value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int indexOf(E value) {
+        int indexof = -1;
+        for (int i = 0; i < size; i++) {
+            if (elements[i] == value) {
+               return indexof = i;
+            }
+        }
+        return indexof;
+    }
+
+//        for (int i = 0; i < elements.length;i++){
+//            if (value == elements[i]){
+//                System.out.println("True");
+//                System.out.println(value + " tại vị trí " + i);
+//                break;
+//            }
+//            if (value != elements[i]){
+//                System.out.println("False");
+//                break;
+//            }
+//        }
+
 
     private void ensureCapa() {
         int newSize = elements.length + 1;
@@ -90,7 +129,7 @@ public class MyList<E> {
     }
 
     public void add(E value) {
-        if (size == elements.length) {
+        if (size >= elements.length) {
             ensureCapa();
         }
         elements[size] = value;
@@ -111,6 +150,17 @@ public class MyList<E> {
             throw new IndexOutOfBoundsException("Index: " + i + ", Size " + i);
         }
         return (E) elements[i];
+    }
+
+    public Object clear(){
+        for (int i = 0; i <= size; i++){
+            elements[i] = null;
+        }
+        size = 0;
+        return "MyList{" +
+                "size=" + size +
+                ", elements=" + Arrays.toString(elements) +
+                '}';
     }
 
 
