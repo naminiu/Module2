@@ -5,6 +5,7 @@ import AAAShop.model.Product;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class ProductService {
     private static ArrayList<Product> products;
@@ -40,6 +41,7 @@ public class ProductService {
         return products;
     }
 
+
     public void addProduct(Product product) {
         ProductService.products.add(product);
     }
@@ -63,6 +65,25 @@ public class ProductService {
                 ProductService.products.remove(i);
                 break;
 
+            }
+        }
+    }
+    // tìm kiếm product bạn muốn sửa, chọn ID để lấy ra product muốn sửa
+    //
+    //
+    public void editProduct(Product newProduct){
+        List<Product> products = getProducts();
+        for (Product p : products){
+            if (p.getId().equals(newProduct.getId())){
+                if(newProduct.getName() != null && !newProduct.getName().isEmpty())
+                p.setName(newProduct.getName());
+                if (newProduct.getPrice() != 0)
+                    p.setPrice(newProduct.getPrice());
+                if(newProduct.getQuantity()!= 0)
+                    p.setQuantity(newProduct.getQuantity());
+                if (newProduct.getManufacturer() != null && !newProduct.getManufacturer().isEmpty())
+                    p.setManufacturer(newProduct.getManufacturer());
+//                p.setUpdateAt(Instant.now());
             }
         }
     }

@@ -11,8 +11,8 @@ public class DeleteProductView extends ProductTemplate {
         System.out.println("DELETE PRODUCT VIEW");
         showProducts(productService.getProducts());
         System.out.println("Input ID:");
-        Long idProduct = Long.parseLong(scanner.nextLine());
-        productService.removeProductById(idProduct);
+        Long idProductDel = Long.parseLong(scanner.nextLine());
+        productService.removeProductById(idProductDel);
         showProducts(productService.getProducts());
     }
 

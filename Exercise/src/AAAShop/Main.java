@@ -3,6 +3,7 @@ package AAAShop;
 import AAAShop.views.ViewTemplate;
 import AAAShop.views.product.AddProductView;
 import AAAShop.views.product.DeleteProductView;
+import AAAShop.views.product.EditProductView;
 import AAAShop.views.product.ProductsView;
 import AAAShop.views.user.AddUserView;
 import AAAShop.views.user.DeleteUserView;
@@ -24,6 +25,7 @@ public class Main {
             System.out.println("4: Show List User");
             System.out.println("5: Add User");
             System.out.println("6: Delete User");
+            System.out.println("7: Edit Product");
 
 
             System.out.println("0: Exit");
@@ -46,6 +48,9 @@ public class Main {
                     break;
                 case 6:
                     viewPage = new DeleteUserView();
+                    break;
+                case 7:
+                    viewPage = new EditProductView();
                     break;
                 case 0:
                     flagMenu = false;
