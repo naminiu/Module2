@@ -1,13 +1,8 @@
 package AAAShop;
 
 import AAAShop.views.ViewTemplate;
-import AAAShop.views.product.AddProductView;
-import AAAShop.views.product.DeleteProductView;
-import AAAShop.views.product.EditProductView;
-import AAAShop.views.product.ProductsView;
-import AAAShop.views.user.AddUserView;
-import AAAShop.views.user.DeleteUserView;
-import AAAShop.views.user.UserView;
+import AAAShop.views.product.*;
+import AAAShop.views.user.*;
 
 import java.util.Scanner;
 
@@ -22,10 +17,17 @@ public class Main {
             System.out.println("1: Show List Product");
             System.out.println("2: Add Product");
             System.out.println("3: Delete Product");
-            System.out.println("4: Show List User");
-            System.out.println("5: Add User");
-            System.out.println("6: Delete User");
-            System.out.println("7: Edit Product");
+            System.out.println("4: Edit Product");
+            System.out.println("5: Sort Product");
+            System.out.println("6: Search Name Product");
+            System.out.println("7: Show List User");
+            System.out.println("8: Add User");
+            System.out.println("9: Delete User");
+            System.out.println("10: Edit User");
+            System.out.println("11: Search Name User");
+            System.out.println("12: Search ID User");
+
+
 
 
             System.out.println("0: Exit");
@@ -41,16 +43,31 @@ public class Main {
                     viewPage = new DeleteProductView();
                     break;
                 case 4:
-                    viewPage = new UserView();
+                    viewPage = new EditProductView();
                     break;
                 case 5:
-                    viewPage = new  AddUserView();
+                    viewPage = new SortProductView();
                     break;
                 case 6:
-                    viewPage = new DeleteUserView();
+                    viewPage = new SearchNameProductView();
                     break;
                 case 7:
-                    viewPage = new EditProductView();
+                    viewPage = new UserView();
+                    break;
+                case 8:
+                    viewPage = new  AddUserView();
+                    break;
+                case 9:
+                    viewPage = new DeleteUserView();
+                    break;
+                case 10:
+                    viewPage = new EditUserView();
+                    break;
+                case 11:
+                    viewPage = new SearchNameUserView();
+                    break;
+                case 12:
+                    viewPage = new SearchIdUserView();
                     break;
                 case 0:
                     flagMenu = false;
@@ -59,7 +76,5 @@ public class Main {
             viewPage.showPage();
             //
         }while (flagMenu);
-
     }
-
 }
