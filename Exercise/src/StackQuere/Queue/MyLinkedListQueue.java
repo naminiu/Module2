@@ -1,4 +1,4 @@
-//package Queue;
+package StackQuere.Queue;//package Queue;
 //
 //public class MyLinkedListQueue {
 //    class Node {

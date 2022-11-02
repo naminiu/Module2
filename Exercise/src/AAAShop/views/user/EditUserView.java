@@ -71,6 +71,7 @@ public class EditUserView extends UserTemplate {
                     flagEdit = false;
                     break;
             }
+            showUsers(userService.getUsers());
             System.out.println("Click 'y' to continue fix || 'n' to exit");
             String flagEditConitnue = scanner.nextLine();
             if (flagEditConitnue.equals("y")) {
