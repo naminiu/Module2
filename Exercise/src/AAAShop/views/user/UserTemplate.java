@@ -12,7 +12,6 @@ public abstract class UserTemplate extends ViewTemplate {
     public UserTemplate() {
         userService = new UserService();
     }
-
     public void showUsers(List<User> list) {
         for (User user : list) {
             System.out.println(user);

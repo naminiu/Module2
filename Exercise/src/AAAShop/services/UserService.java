@@ -111,6 +111,7 @@ public class UserService {
         return results;
 
     }
+
     public List<User> searchIdUser(Long id) {
         ArrayList<User> results = new ArrayList<>();
         for (User u : users) {

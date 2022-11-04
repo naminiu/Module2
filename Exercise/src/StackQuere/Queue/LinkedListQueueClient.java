@@ -5,13 +5,7 @@ import java.util.Queue;
 
 public class LinkedListQueueClient {
     public static void main(String[] args) {
-//        MyLinkedListQueue queue = new MyLinkedListQueue();
-//        queue.enqueue(10);
-//        queue.enqueue(20);
-//        queue.enqueue(30);
-//        queue.enqueue(40);
-//        queue.enqueue(50);
-//        System.out.println("Dequeued item is " + queue.dequeue().key);
+
         Queue<Integer> queue = new PriorityQueue<>();
         queue.offer(10);
         queue.offer(20);
@@ -28,6 +22,7 @@ public class LinkedListQueueClient {
         System.out.println(queue.element()); //  chỉ lấy ra phần tử đầu tiên
 
         System.out.println(queue);
+
 
     }
     }

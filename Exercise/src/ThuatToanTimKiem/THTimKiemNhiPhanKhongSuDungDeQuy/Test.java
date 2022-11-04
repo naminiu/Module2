@@ -1,8 +1,6 @@
 package ThuatToanTimKiem.THTimKiemNhiPhanKhongSuDungDeQuy;
 
 
-import java.util.Arrays;
-
 public class Test {
     static int[] list = {2, 4, 7, 10, 11, 45, 50, 59, 60, 66};
 
