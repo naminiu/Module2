@@ -1,4 +1,4 @@
-package ngoaiLe;
+package TryCatchNgoaiLe;
 
 import java.util.Scanner;
 
@@ -21,7 +21,6 @@ public class Test {
 //            System.out.println("số nguyên là " + number);
 //        }
 //    }
-    public static void main(String[] args) {
 //        try {
 //            System.out.println(divide());
 //        } catch (Exception e) {
@@ -38,13 +37,25 @@ public class Test {
 //        static void readFile() throws FileNotFoundException {
 //            FileReader file = new FileReader("../a.txt");
 //        }
-        int number = 0;
-        try {
-            System.out.println("nhập vào 1 số nguyên");
-            number = scanner.nextInt();
-        } catch (Exception e) {
-            System.out.println("số nguyên là " + number);
-        }
+//        int number = 0;
+//        try {
+//            System.out.println("nhập vào 1 số nguyên");
+//            number = scanner.nextInt();
+//        } catch (Exception e) {
+//            System.out.println("số nguyên là " + number);
+//        }
 
+
+    public static void main(String[] args) {
+        try {
+            System.out.println(divide());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    static int divide() {
+        int a = 10, b = 0;
+        if (b == 0) throw new ArithmeticException();
+        else return a / b;
     }
 }

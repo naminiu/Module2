@@ -1,4 +1,4 @@
-package ThuatToanSapXep.THSuDungLopArrayIndexOutOfBoundsException;
+package TryCatchNgoaiLe.THSuDungLopArrayIndexOutOfBoundsException;
 
 import java.util.Random;
 import java.util.Scanner;
