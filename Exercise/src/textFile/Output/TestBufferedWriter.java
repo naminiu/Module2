@@ -7,11 +7,16 @@ public class TestBufferedWriter {
     public static void main(String[] args) {
 
         try {
-            FileWriter fw = new FileWriter("G:/Module2/BaiTap/Exercise/src/textFile/outfile/testBufferedWritertest.txt");
+            FileWriter fw = new FileWriter("G:\\Module2\\BaiTap\\Exercise\\src\\textFile\\THTimGiaTriLonNhatVaGhiRaFile\\max.txt");
             BufferedWriter bw = new BufferedWriter(fw);
 
-            bw.write(128);
-            bw.close();
+            bw.write(9);
+            bw.write(5);
+            bw.write(4);
+            bw.write(2);
+            bw.write(15);
+            bw.write(3);
+            bw.write(6);
         } catch (Exception e) {
             e.printStackTrace();
         }
