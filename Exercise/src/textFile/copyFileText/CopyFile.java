@@ -22,8 +22,8 @@ public class CopyFile {
     }
 
     public static void main(String[] args) {
-        File f1 = new File("G:\\Module2\\BaiTap\\Exercise\\src\\textFile\\f1.txt");
-        File f2 = new File("G:\\Module2\\BaiTap\\Exercise\\src\\textFile\\f2.txt");
+        File f1 = new File("G:\\Module2\\BaiTap\\Exercise\\src\\textFile\\copyFileText\\f1.txt");
+        File f2 = new File("G:\\Module2\\BaiTap\\Exercise\\src\\textFile\\copyFileText\\f1copy.txt");
         CopyFile.copyAll(f1,f2);
     }
 }

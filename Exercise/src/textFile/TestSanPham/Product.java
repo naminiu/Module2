@@ -1,4 +1,4 @@
-package AAAShop.model;
+package textFile.TestSanPham;
 
 import java.time.Instant;
 
@@ -10,6 +10,8 @@ public class Product {
     private String manufacturer;
     private Instant createAt;
     private Instant updateAt;
+
+
 
     public Product(Long id, String name, float price, int quantity,
                    String manufacturer, Instant createAt, Instant updateAt) {
@@ -24,6 +26,7 @@ public class Product {
 
     public Product() {
     }
+
     public static Product parseProduct(String record) {
         String[] fields = record.split(",");
         long id = Long.parseLong(fields[0]);
@@ -39,7 +42,6 @@ public class Product {
         Instant updatedAt = null;
         if (temp != null && !temp.equals("null"))
             updatedAt = Instant.parse(temp);
-
         return new Product(id, name, price, quantity, manufacturer, createdAt, updatedAt);
     }
 
@@ -98,8 +100,7 @@ public class Product {
         this.updateAt = updateAt;
     }
 
-    @Override
-//    public String toString() {
+    //    public String toString() {
 //        String pattern = "MM-dd-yyyy HH:mm:ss";
 //        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 //        String dateCreateAt = simpleDateFormat.format(this.createAt);
@@ -108,8 +109,9 @@ public class Product {
 //        return String.format("%5s, %15s, %5s, %5s, %5s, %5s, %5s", this.id, this.name, this.price,
 //                this.quantity, this.manufacturer, dateCreateAt, dateUpdateAt);
 //    }
+    @Override
     public String toString() {
-        return String.format("%5s, %15s, %5s, %5s, %5s, %5s, %5s",
+        return String.format("%s,%s,%s,%s,%s,%s,%s",
                 id,
                 name,
                 price,

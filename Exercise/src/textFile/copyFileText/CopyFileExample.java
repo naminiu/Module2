@@ -9,8 +9,7 @@ public class CopyFileExample {
 
         try {
             inStream = new FileInputStream(new File("G:\\Module2\\BaiTap\\Exercise\\src\\textFile\\copyFileText\\f1.txt"));
-
-            outStream = new FileOutputStream(new File("G:\\Module2\\BaiTap\\Exercise\\src\\textFile\\copyFileText\\f1_copy.txt"));
+            outStream = new FileOutputStream(new File("G:\\Module2\\BaiTap\\Exercise\\src\\textFile\\copyFileText\\f1co.txt"));
 
             int length;
             byte[] buffer = new byte[1024];

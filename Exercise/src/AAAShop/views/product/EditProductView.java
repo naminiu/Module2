@@ -22,11 +22,11 @@ public class EditProductView extends ProductTemplate {
             System.out.println("0. Back to menu");
             Product newProduct = new Product();
             newProduct.setId(idProductEdit);
-            int menu = Integer.parseInt(scanner.nextLine());
             String nameEdit = null;
             float priceEdit = 0;
             int quantityEdit = 0;
             String manufacturerEdit = null;
+            int menu = Integer.parseInt(scanner.nextLine());
             switch (menu) {
                 case 1:
                     System.out.println("Input Name Product");

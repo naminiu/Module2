@@ -26,11 +26,8 @@ public class Main {
             System.out.println("10: Edit User");
             System.out.println("11: Search Name User");
             System.out.println("12: Search ID User");
-
-
-
-
             System.out.println("0: Exit");
+
             int menu = Integer.parseInt(scanner.nextLine());
             switch (menu) {
                 case 1:

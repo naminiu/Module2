@@ -25,7 +25,7 @@ public class AddProductView extends ProductTemplate {
         System.out.println("Input manufacturer:");
         String manufacturerProduct = scanner.nextLine();
 
-        Date creatAtProduct = new Date();
+        Instant creatAtProduct = new Date().toInstant();
         Instant updateAtProduct = Instant.now();
         Product product = new Product(idProduct, nameProduct, priceProduct,
                 quantityProduct,manufacturerProduct,  creatAtProduct, updateAtProduct);

@@ -17,6 +17,7 @@ public class TestBufferedWriter {
             bw.write(15);
             bw.write(3);
             bw.write(6);
+            bw.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

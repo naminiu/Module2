@@ -1,5 +1,7 @@
 package textFile.Output;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -23,26 +25,20 @@ public class TestPrintwriter {
 
     public static void main(String[] args) {
         try {
-            PrintWriter printWriter = new PrintWriter("G:/Module2/BaiTap/Exercise/src/textFile/outfile/testprintWriter.txt");
-
-            printWriter.println(1);
-            printWriter.print("Hoang");
-            printWriter.print(" ");
-            printWriter.print('a');
-            printWriter.print(" ");
-            printWriter.print("true");
-            printWriter.println(" ");
-            System.out.println("Nhập tuổi: ");
-            int a = Integer.parseInt(scanner.nextLine());
-            System.out.println("Nhập tên");
-            String b = scanner.nextLine();
-            TestPrintwriter student = new TestPrintwriter(a, b);
-            printWriter.print(student);
-            printWriter.flush();
-            printWriter.close();
+            FileWriter fw = new FileWriter("G:/Module2/BaiTap/Exercise/src/textFile/outfile/testprintWriter.txt",true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+//            System.out.println("Nhập tuổi: ");
+//            int a = Integer.parseInt(scanner.nextLine());
+//            System.out.println("Nhập tên");
+//            String b = scanner.nextLine();
+//            TestPrintwriter student = new TestPrintwriter(a, b);
+//            pw.print(student);
+            pw.write("123");
+            pw.flush();
+            pw.close();
         } catch (Exception a) {
             a.printStackTrace();
         }
-
     }
 }
