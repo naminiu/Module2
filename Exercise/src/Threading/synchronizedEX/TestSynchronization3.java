@@ -24,6 +24,5 @@ public class TestSynchronization3 {
         t1.start();
         t2.start();
         t3.start();
-
     }
 }

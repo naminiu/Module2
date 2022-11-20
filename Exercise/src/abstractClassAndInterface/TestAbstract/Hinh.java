@@ -21,7 +21,5 @@ public abstract class Hinh {
         return "Hinh{"  + toaDo +
                 '}';
     }
-
      abstract double tinhDienTich();
-
 }
